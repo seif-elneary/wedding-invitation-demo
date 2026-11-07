@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#fbe4e9">
+
+    <title>دعوة زفاف آدم وليلى</title>
+    <meta name="description" content="دعوة زفاف إلكترونية تجريبية (Demo) من S.E Digital Solutions. كل الأسماء والبيانات في هذه الصفحة وهمية.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="دعوة زفاف آدم وليلى">
+    <meta property="og:description" content="دعوة زفاف إلكترونية تجريبية من S.E Digital Solutions.">
+    <meta property="og:locale" content="ar_EG">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Aref+Ruqaa:wght@400;700&family=Cairo:wght@300;400;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <noscript>
+        <style>
+            .intro,
+            .veil {
+                display: none !important;
+            }
+
+            .invitation.hidden {
+                display: block !important;
+            }
+
+            [data-anim] {
+                opacity: 1 !important;
+                transform: none !important;
+                filter: none !important;
+                clip-path: none !important;
+            }
+        </style>
+    </noscript>
+</head>
+
+<body>
+    <!-- مكتبة الأيقونات والزخارف (SVG) -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+        <defs>
+            <linearGradient id="goldGrad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#8c6a2f" />
+                <stop offset=".4" stop-color="#e6cf9a" />
+                <stop offset=".7" stop-color="#b8914f" />
+                <stop offset="1" stop-color="#8c6a2f" />
+            </linearGradient>
+
+            <symbol id="orn-corner" viewBox="0 0 90 90">
+                <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3 86V26Q3 3 26 3H86" stroke-width="1.6" />
+                    <path d="M13 58V32Q13 13 32 13H58" stroke-width="1" opacity=".7" />
+                    <path d="M24 24c6 0 10 4 10 10-6 0-10-4-10-10z" stroke-width="1" />
+                </g>
+                <circle cx="3" cy="3" r="3" fill="currentColor" />
+            </symbol>
+
+            <!-- وردة متعددة الطبقات (الألوان بتتحدد من --p1 و --p2 و --p3) -->
+            <symbol id="rose" viewBox="-50 -50 100 100">
+                <circle r="47" fill="var(--p1, #e58aa0)" opacity=".16" />
+                <g fill="var(--p1, #e58aa0)" stroke="#fff" stroke-opacity=".38" stroke-width="1.2">
+                    <ellipse cy="-24" rx="17" ry="22" />
+                    <ellipse cy="-24" rx="17" ry="22" transform="rotate(72)" />
+                    <ellipse cy="-24" rx="17" ry="22" transform="rotate(144)" />
+                    <ellipse cy="-24" rx="17" ry="22" transform="rotate(216)" />
+                    <ellipse cy="-24" rx="17" ry="22" transform="rotate(288)" />
+                </g>
+                <g fill="var(--p2, #f4b6c4)" stroke="#fff" stroke-opacity=".45" stroke-width="1">
+                    <ellipse cy="-15" rx="13" ry="16" transform="rotate(36)" />
+                    <ellipse cy="-15" rx="13" ry="16" transform="rotate(108)" />
+                    <ellipse cy="-15" rx="13" ry="16" transform="rotate(180)" />
+                    <ellipse cy="-15" rx="13" ry="16" transform="rotate(252)" />
+                    <ellipse cy="-15" rx="13" ry="16" transform="rotate(324)" />
+                </g>
+                <g fill="var(--p3, #fbd9e0)" stroke="#fff" stroke-opacity=".5" stroke-width="1">
+                    <ellipse cy="-8" rx="9" ry="11" />
+                    <ellipse cy="-8" rx="9" ry="11" transform="rotate(90)" />
+                    <ellipse cy="-8" rx="9" ry="11" transform="rotate(180)" />
+                    <ellipse cy="-8" rx="9" ry="11" transform="rotate(270)" />
+                </g>
+                <circle r="5" fill="var(--p1, #e58aa0)" opacity=".75" />
+                <path d="M-6-2c4-6 12-4 12 2s-8 8-12 2" fill="none" stroke="#fff" stroke-opacity=".6" stroke-width="1.4" />
+            </symbol>
+
+            <symbol id="bud" viewBox="0 0 40 60">
+                <ellipse cx="20" cy="22" rx="11" ry="18" fill="var(--p1, #e58aa0)" />
+                <ellipse cx="20" cy="24" rx="7" ry="14" fill="var(--p3, #fbd9e0)" opacity=".85" />
+                <path d="M8 38c4 4 20 4 24 0-2 8-8 14-12 14s-10-6-12-14z" fill="#7f9a70" />
+            </symbol>
+
+            <symbol id="leaf" viewBox="0 0 40 80">
+                <path d="M20 78C2 56 2 22 20 2c18 20 18 54 0 76z" fill="currentColor" />
+                <path d="M20 74V10" stroke="#fff" stroke-opacity=".35" stroke-width="1.5" fill="none" />
+            </symbol>
+
+            <symbol id="sparkle" viewBox="-10 -10 20 20">
+                <path d="M0-10C1 -3 3 -1 10 0C3 1 1 3 0 10C-1 3 -3 1 -10 0C-3 -1 -1 -3 0 -10Z" fill="currentColor" />
+            </symbol>
+
+            <symbol id="flower" viewBox="-50 -50 100 100">
+                <g fill="currentColor" opacity=".92">
+                    <ellipse cy="-27" rx="11" ry="22" />
+                    <ellipse cy="-27" rx="11" ry="22" transform="rotate(45)" />
+                    <ellipse cy="-27" rx="11" ry="22" transform="rotate(90)" />
+                    <ellipse cy="-27" rx="11" ry="22" transform="rotate(135)" />
+                    <ellipse cy="-27" rx="11" ry="22" transform="rotate(180)" />
+                    <ellipse cy="-27" rx="11" ry="22" transform="rotate(225)" />
+                    <ellipse cy="-27" rx="11" ry="22" transform="rotate(270)" />
+                    <ellipse cy="-27" rx="11" ry="22" transform="rotate(315)" />
+                </g>
+                <circle r="9" fill="#fff" opacity=".75" />
+            </symbol>
+
+            <!-- إكليل ورد للركن (مثبت في الركن العلوي الأيسر) -->
+            <symbol id="garland" viewBox="0 0 260 260">
+                <g fill="none" stroke="#7f9a70" stroke-width="3" stroke-linecap="round">
+                    <path d="M-4 52C60 70 112 112 150 186C168 222 184 244 198 262" />
+                    <path d="M54 -4C70 56 112 100 188 132C226 150 246 164 262 182" opacity=".8" />
+                </g>
+                <g color="#8fa880">
+                    <use href="#leaf" x="64" y="70" width="26" height="52" transform="rotate(-48 77 96)" />
+                    <use href="#leaf" x="104" y="104" width="26" height="52" transform="rotate(-8 117 130)" />
+                    <use href="#leaf" x="132" y="150" width="24" height="48" transform="rotate(32 144 174)" />
+                    <use href="#leaf" x="110" y="40" width="24" height="48" transform="rotate(62 122 64)" />
+                    <use href="#leaf" x="170" y="96" width="24" height="48" transform="rotate(74 182 120)" />
+                    <use href="#leaf" x="36" y="108" width="22" height="44" transform="rotate(-70 47 130)" />
+                </g>
+                <use href="#rose" x="6" y="6" width="108" height="108" style="--p1:#e58aa0;--p2:#f1a9b9;--p3:#fbd9e0" />
+                <use href="#rose" x="102" y="-8" width="78" height="78" style="--p1:#f4bccb;--p2:#f9d2db;--p3:#fff0f3" />
+                <use href="#rose" x="-10" y="100" width="76" height="76" style="--p1:#f4bccb;--p2:#f9d2db;--p3:#fff0f3" />
+                <use href="#rose" x="96" y="92" width="62" height="62" style="--p1:#f0d9a8;--p2:#f7e8c4;--p3:#fff8e6" />
+                <use href="#bud" x="168" y="130" width="26" height="40" transform="rotate(40 181 150)" style="--p1:#e58aa0;--p3:#fbd9e0" />
+                <use href="#bud" x="20" y="170" width="24" height="38" transform="rotate(-30 32 189)" style="--p1:#e58aa0;--p3:#fbd9e0" />
+                <g color="#c9a45e">
+                    <use href="#sparkle" x="176" y="22" width="16" height="16" />
+                    <use href="#sparkle" x="40" y="184" width="14" height="14" />
+                    <use href="#sparkle" x="206" y="176" width="12" height="12" />
+                    <use href="#sparkle" x="150" y="66" width="10" height="10" />
+                </g>
+            </symbol>
+
+            <symbol id="i-calendar" viewBox="0 0 24 24">
+                <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3.5" y="5" width="17" height="15.5" rx="3" />
+                    <path d="M8 3v4M16 3v4M3.5 10h17" />
+                    <path d="M12 17.2s-3-1.9-3-3.7a1.7 1.7 0 0 1 3-1 1.7 1.7 0 0 1 3 1c0 1.8-3 3.7-3 3.7z" />
+                </g>
+            </symbol>
+            <symbol id="i-clock" viewBox="0 0 24 24">
+                <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="8.5" />
+                    <path d="M12 7.5V12l3 2" />
+                </g>
+            </symbol>
+            <symbol id="i-pin" viewBox="0 0 24 24">
+                <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 21s6.5-5.6 6.5-11A6.5 6.5 0 0 0 5.5 10C5.5 15.4 12 21 12 21z" />
+                    <circle cx="12" cy="10" r="2.4" />
+                </g>
+            </symbol>
+            <symbol id="i-heart" viewBox="0 0 24 24">
+                <path d="M12 20.5s-7.5-4.7-7.5-10.2A4.3 4.3 0 0 1 12 7.6a4.3 4.3 0 0 1 7.5 2.7c0 5.5-7.5 10.2-7.5 10.2z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+            </symbol>
+            <symbol id="i-share" viewBox="0 0 24 24">
+                <g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="6" cy="12" r="2.5" />
+                    <circle cx="17.5" cy="5.5" r="2.5" />
+                    <circle cx="17.5" cy="18.5" r="2.5" />
+                    <path d="M8.2 10.8l7.1-4.1M8.2 13.2l7.1 4.1" />
+                </g>
+            </symbol>
+            <symbol id="i-copy" viewBox="0 0 24 24">
+                <g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="8.5" y="8.5" width="11" height="11" rx="2.5" />
+                    <path d="M15.5 8.5V6.5a2 2 0 0 0-2-2h-7a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h2" />
+                </g>
+            </symbol>
+            <symbol id="i-send" viewBox="0 0 24 24">
+                <g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 3 10.5 13.5M21 3l-6.5 18-4-7.5L3 9.5 21 3z" />
+                </g>
+            </symbol>
+            <symbol id="i-route" viewBox="0 0 24 24">
+                <g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M7 17 17 7M9 7h8v8" />
+                </g>
+            </symbol>
+        </defs>
+    </svg>
+
+    <!-- طبقة البتلات والذهب -->
+    <canvas id="fx" aria-hidden="true"></canvas>
+    <div class="progress" id="progress" aria-hidden="true"></div>
+    <div class="veil" id="veil" aria-hidden="true"></div>
+
+    <!-- شاشة البداية -->
+    <section class="intro" id="introScreen" aria-label="شاشة فتح الدعوة">
+        <div class="intro-bg"></div>
+        <div class="intro-glow"></div>
+
+        <svg class="corner c-tr" aria-hidden="true"><use href="#orn-corner" /></svg>
+        <svg class="corner c-tl" aria-hidden="true"><use href="#orn-corner" /></svg>
+        <svg class="corner c-br" aria-hidden="true"><use href="#orn-corner" /></svg>
+        <svg class="corner c-bl" aria-hidden="true"><use href="#orn-corner" /></svg>
+
+        <div class="intro-content">
+            <p class="intro-kicker">بكل الحب والسعادة</p>
+
+            <h1 class="intro-names" aria-label="آدم وليلى">
+                <span class="n n1" data-groom-en>Adam</span>
+                <span class="amp">&amp;</span>
+                <span class="n n2" data-bride-en>Layla</span>
+            </h1>
+
+            <p class="intro-description">
+                يتشرفان بدعوتكم لمشاركتهما أجمل لحظات العمر
+            </p>
+
+            <div class="envelope" id="envelope">
+                <div class="env-back"></div>
+                <div class="env-letter">
+                    <span class="letter-mono"><b data-groom-initial>A</b><i>&amp;</i><b data-bride-initial>L</b></span>
+                    <span class="letter-line"></span>
+                    <span class="letter-text">دعوة زفاف</span>
+                </div>
+                <div class="env-front"></div>
+                <div class="env-flap"></div>
+                <button class="seal" id="sealButton" type="button" aria-label="افتح الدعوة">
+                    <span class="seal-mono" data-seal>A·L</span>
+                </button>
+            </div>
+
+            <button class="primary-button open-button" id="openInvitation" type="button">
+                <span id="openLabel">افتح دعوتك</span>
+                <svg class="ico" aria-hidden="true"><use href="#i-heart" /></svg>
+            </button>
+        </div>
+    </section>
+
+    <!-- محتوى الدعوة -->
+    <main id="invitation" class="invitation hidden">
+
+        <!-- زر الموسيقى (أيقونة فقط) -->
+        <button id="musicButton" class="music-fab" type="button" aria-label="تشغيل الموسيقى" aria-pressed="false">
+            <span class="ring" aria-hidden="true"></span>
+            <svg class="mi" viewBox="0 0 24 24" aria-hidden="true">
+                <g class="waves">
+                    <path d="M18.6 8.4a5 5 0 0 1 0 7.2" />
+                    <path d="M21.2 5.6a9 9 0 0 1 0 12.8" />
+                </g>
+                <g class="note">
+                    <path d="M8.8 17.4V6.3l7-1.7v10.9" />
+                    <circle cx="6.5" cy="17.6" r="2.4" />
+                    <circle cx="13.5" cy="15.8" r="2.4" />
+                </g>
+                <path class="slash" d="M3.6 3.6l16.8 16.8" />
+            </svg>
+        </button>
+
+        <!-- المقدمة -->
+        <section class="hero" id="top">
+            <div class="hero-bg" aria-hidden="true"></div>
+
+            <!-- ورد الخلفية -->
+            <div class="decor" aria-hidden="true">
+                <div class="plx" data-parallax="0.10">
+                    <svg class="garland g-tl"><use href="#garland" /></svg>
+                </div>
+                <div class="plx" data-parallax="0.10">
+                    <svg class="garland g-tr"><use href="#garland" /></svg>
+                </div>
+                <svg class="float f1"><use href="#rose" style="--p1:#f0a7b8;--p2:#f7c9d3;--p3:#fff0f3" /></svg>
+                <svg class="float f2"><use href="#flower" style="color:#f6d9a8" /></svg>
+                <svg class="float f3"><use href="#rose" style="--p1:#f4bccb;--p2:#f9d2db;--p3:#fff0f3" /></svg>
+                <svg class="float f4 sp"><use href="#sparkle" /></svg>
+                <svg class="float f5 sp"><use href="#sparkle" /></svg>
+            </div>
+
+            <figure class="arch" id="arch" data-anim="zoom">
+                <div class="arch-inner">
+                    <div class="arch-fallback" aria-hidden="true">
+                        <span class="af"><b data-groom-initial>A</b></span>
+                        <i>&amp;</i>
+                        <span class="af"><b data-bride-initial>L</b></span>
+                    </div>
+                    <img class="arch-photo" id="archPhoto" alt="صورة العروسين" width="600" height="800" hidden>
+                </div>
+                <svg class="arch-rose r1"><use href="#rose" style="--p1:#e58aa0;--p2:#f1a9b9;--p3:#fbd9e0" /></svg>
+                <svg class="arch-rose r2"><use href="#rose" style="--p1:#f4bccb;--p2:#f9d2db;--p3:#fff0f3" /></svg>
+                <svg class="arch-rose r3"><use href="#rose" style="--p1:#f0d9a8;--p2:#f7e8c4;--p3:#fff8e6" /></svg>
+            </figure>
+
+            <p class="eyebrow" data-anim="up" data-delay=".15">بِسْمِ اللهِ الرَّحْمَنِ الرَّحِيمِ</p>
+
+            <p class="hero-intro" data-anim="up" data-delay=".25">
+                وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً
+            </p>
+            <p class="hero-verse-end" data-anim="fade" data-delay=".35">صدق الله العظيم</p>
+
+            <div class="hero-divider" data-anim="fade" data-delay=".4"><svg class="ico" aria-hidden="true"><use href="#i-heart" /></svg></div>
+
+            <p class="eyebrow" data-anim="up" data-delay=".45">بكل الحب ندعوكم لحضور حفل زفاف</p>
+
+            <h2 class="couple-names">
+                <span data-anim="up" data-delay=".55" data-groom>آدم</span>
+                <span class="ampersand" data-anim="zoom" data-delay=".7">&amp;</span>
+                <span data-anim="up" data-delay=".8" data-bride>ليلى</span>
+            </h2>
+
+            <p class="hero-message" data-anim="up" data-delay=".9">
+                فرحتنا لا تكتمل إلا بوجودكم ومشاركتكم أجمل أيام حياتنا
+            </p>
+
+            <div class="hero-date" data-anim="up" data-delay="1">
+                <svg class="ico" aria-hidden="true"><use href="#i-calendar" /></svg>
+                <span id="heroDateText">الجمعة، 5 مارس 2027</span>
+            </div>
+
+            <a class="scroll-cue" href="#countdown" aria-label="انزل لأسفل">
+                <span></span>
+            </a>
+        </section>
+
+        <!-- العد التنازلي -->
+        <section class="countdown-section section-padding" id="countdown">
+            <svg class="garland g-sm g-tr2" aria-hidden="true"><use href="#garland" /></svg>
+
+            <p class="eyebrow" data-anim="up">اللحظة المنتظرة تقترب</p>
+            <h2 class="section-title" data-anim="split">باقي على فرحتنا</h2>
+            <div class="orn-divider" data-anim="fade" aria-hidden="true"><i></i><svg><use href="#flower" /></svg><i></i></div>
+
+            <div class="countdown" dir="rtl" data-stagger=".12">
+                <div class="countdown-box" data-anim="up">
+                    <strong id="days">00</strong>
+                    <span>يوم</span>
+                </div>
+                <div class="countdown-box" data-anim="up">
+                    <strong id="hours">00</strong>
+                    <span>ساعة</span>
+                </div>
+                <div class="countdown-box" data-anim="up">
+                    <strong id="minutes">00</strong>
+                    <span>دقيقة</span>
+                </div>
+                <div class="countdown-box" data-anim="up">
+                    <strong id="seconds">00</strong>
+                    <span>ثانية</span>
+                </div>
+            </div>
+
+            <p id="countdownMessage" class="muted-text" data-anim="fade" data-delay=".5">
+                مستنيين اليوم الجميل معاكم
+            </p>
+        </section>
+
+        <!-- تفاصيل الفرح -->
+        <section class="details-section section-padding">
+            <p class="eyebrow" data-anim="up">احفظوا الموعد</p>
+            <h2 class="section-title" data-anim="split">تفاصيل يومنا</h2>
+            <div class="orn-divider" data-anim="fade" aria-hidden="true"><i></i><svg><use href="#flower" /></svg><i></i></div>
+
+            <div class="details-grid" data-stagger=".14">
+                <article class="detail-card" data-anim="up">
+                    <span class="detail-icon"><svg class="ico" aria-hidden="true"><use href="#i-calendar" /></svg></span>
+                    <h3>موعد الفرح</h3>
+                    <p id="detailDate">الجمعة، 5 مارس 2027</p>
+                </article>
+
+                <article class="detail-card" data-anim="up">
+                    <span class="detail-icon"><svg class="ico" aria-hidden="true"><use href="#i-clock" /></svg></span>
+                    <h3>الساعة</h3>
+                    <p id="detailTime">8:00 مساءً</p>
+                </article>
+
+                <article class="detail-card" data-anim="up">
+                    <span class="detail-icon"><svg class="ico" aria-hidden="true"><use href="#i-pin" /></svg></span>
+                    <h3>مكان الاحتفال</h3>
+                    <p id="detailVenue">قاعة اللؤلؤة</p>
+                    <p class="muted-text" id="detailAddress">وسط البلد، القاهرة، مصر</p>
+                </article>
+            </div>
+
+            <button id="calendarButton" class="outline-button" type="button" data-anim="up" data-delay=".3">
+                <svg class="ico" aria-hidden="true"><use href="#i-calendar" /></svg>
+                أضف الموعد إلى التقويم
+            </button>
+        </section>
+
+        <!-- الخريطة -->
+        <section class="location-section section-padding" id="locationMap">
+            <p class="eyebrow" data-anim="up">نتشرف بوجودكم</p>
+            <h2 class="section-title" data-anim="split">طريقكم لفرحتنا</h2>
+            <div class="orn-divider" data-anim="fade" aria-hidden="true"><i></i><svg><use href="#flower" /></svg><i></i></div>
+
+            <p class="section-description" data-anim="up" data-delay=".1">
+                مستنيينكم تنورونا وتشاركونا أجمل لحظات العمر
+            </p>
+
+            <div class="map-card" data-anim="zoom">
+                <div class="map-header">
+                    <div class="map-pin"><svg class="ico" aria-hidden="true"><use href="#i-pin" /></svg></div>
+                    <div>
+                        <h3 id="mapVenueName">قاعة اللؤلؤة</h3>
+                        <p id="mapVenueAddress">وسط البلد، القاهرة، مصر</p>
+                    </div>
+                </div>
+
+                <div class="map-frame">
+                    <iframe id="weddingMap" title="خريطة مكان الفرح" src="about:blank" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+                </div>
+
+                <a id="openMapDirections" class="primary-button map-button" href="#" target="_blank" rel="noopener noreferrer">
+                    افتح الطريق للقاعة
+                    <svg class="ico" aria-hidden="true"><use href="#i-route" /></svg>
+                </a>
+            </div>
+
+            <p class="map-footer" data-anim="up">وجودكم هو أجمل هدية لينا</p>
+        </section>
+
+        <!-- معرض الصور -->
+        <section class="gallery-section section-padding">
+            <p class="eyebrow" data-anim="up">لحظات من حكايتنا</p>
+            <h2 class="section-title" data-anim="split">ذكرياتنا الجميلة</h2>
+            <div class="orn-divider" data-anim="fade" aria-hidden="true"><i></i><svg><use href="#flower" /></svg><i></i></div>
+
+            <p class="section-description" data-anim="up" data-delay=".1">
+                كل صورة حكاية، وكل لحظة بتجمعنا ليها ذكرى
+            </p>
+
+            <div class="gallery-grid" data-stagger=".16">
+                <div class="frame" data-anim="mask">
+                    <button class="gallery-item" type="button" aria-label="عرض الصورة الأولى">
+                        <img src="assets/gallery-1.jpg" alt="عروسان في قاعة الزفاف" width="900" height="1200" loading="lazy">
+                        <span><svg class="ico" aria-hidden="true"><use href="#i-heart" /></svg></span>
+                    </button>
+                    <svg class="frame-flower" aria-hidden="true"><use href="#rose" style="--p1:#e58aa0;--p2:#f1a9b9;--p3:#fbd9e0" /></svg>
+                </div>
+
+                <div class="frame" data-anim="mask">
+                    <button class="gallery-item" type="button" aria-label="عرض الصورة الثانية">
+                        <img src="assets/gallery-2.jpg" alt="يدان وخاتما الزفاف مع باقة ورد" width="900" height="1200" loading="lazy">
+                        <span><svg class="ico" aria-hidden="true"><use href="#i-heart" /></svg></span>
+                    </button>
+                    <svg class="frame-flower" aria-hidden="true"><use href="#rose" style="--p1:#f4bccb;--p2:#f9d2db;--p3:#fff0f3" /></svg>
+                </div>
+
+                <div class="frame" data-anim="mask">
+                    <button class="gallery-item" type="button" aria-label="عرض الصورة الثالثة">
+                        <img src="assets/gallery-3.jpg" alt="العروسان في رقصة الزفاف" width="900" height="1200" loading="lazy">
+                        <span><svg class="ico" aria-hidden="true"><use href="#i-heart" /></svg></span>
+                    </button>
+                    <svg class="frame-flower" aria-hidden="true"><use href="#rose" style="--p1:#f0d9a8;--p2:#f7e8c4;--p3:#fff8e6" /></svg>
+                </div>
+            </div>
+        </section>
+
+        <!-- نافذة تكبير الصور -->
+        <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="عرض الصورة">
+            <button id="lightboxClose" class="lightbox-close" type="button" aria-label="إغلاق الصورة">×</button>
+            <img id="lightboxImage" src="" alt="صورة مكبرة">
+        </div>
+
+        <!-- التهنئة -->
+        <section class="wishes-section section-padding">
+            <svg class="garland g-sm g-tl2" aria-hidden="true"><use href="#garland" /></svg>
+
+            <p class="eyebrow" data-anim="up">شاركونا فرحتنا</p>
+            <h2 class="section-title" data-anim="split">كلمة من القلب</h2>
+            <div class="orn-divider" data-anim="fade" aria-hidden="true"><i></i><svg><use href="#flower" /></svg><i></i></div>
+
+            <p class="section-description" data-anim="up" data-delay=".1">
+                اكتبوا لنا أجمل كلمات التهنئة والدعوات
+            </p>
+
+            <form id="wishesForm" class="wishes-form" novalidate data-anim="up" data-delay=".15">
+                <label for="wishesName">اسمك</label>
+                <input id="wishesName" name="name" type="text" placeholder="اكتب اسمك هنا" maxlength="80" autocomplete="name" required>
+
+                <label for="wishesMessage">رسالة التهنئة</label>
+                <textarea id="wishesMessage" name="message" placeholder="اكتب تهنئتك للعروسين..." rows="4" maxlength="1000" required></textarea>
+
+                <button class="primary-button" type="submit">
+                    إرسال التهنئة
+                    <svg class="ico" aria-hidden="true"><use href="#i-send" /></svg>
+                </button>
+
+                <p id="wishesStatus" class="form-status" role="status" aria-live="polite"></p>
+            </form>
+        </section>
+
+        <!-- مشاركة الدعوة -->
+        <section class="share-section section-padding">
+            <div class="share-heart" data-anim="zoom"><svg class="ico" aria-hidden="true"><use href="#i-heart" /></svg></div>
+            <h2 class="section-title" data-anim="split">فرحتنا بيكم تكمل</h2>
+
+            <p class="section-description" data-anim="up" data-delay=".1">
+                شاركوا دعوتنا مع أحبابكم
+            </p>
+
+            <div class="share-buttons" data-stagger=".14">
+                <button id="shareButton" class="primary-button" type="button" data-anim="up">
+                    <svg class="ico" aria-hidden="true"><use href="#i-share" /></svg>
+                    شارك الدعوة
+                </button>
+
+                <button id="copyButton" class="outline-button" type="button" data-anim="up">
+                    <svg class="ico" aria-hidden="true"><use href="#i-copy" /></svg>
+                    <span id="copyLabel">انسخ رابط الدعوة</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- الختام -->
+        <footer class="footer">
+            <svg class="garland g-sm g-bl" aria-hidden="true"><use href="#garland" /></svg>
+            <svg class="garland g-sm g-br" aria-hidden="true"><use href="#garland" /></svg>
+
+            <svg class="footer-flower" aria-hidden="true" data-anim="zoom"><use href="#rose" style="--p1:#e58aa0;--p2:#f1a9b9;--p3:#fbd9e0" /></svg>
+            <p data-anim="up">وجودكم يسعدنا ويزيد فرحتنا</p>
+
+            <h2 data-anim="up" data-delay=".1">
+                <span data-groom>آدم</span>
+                <span>&amp;</span>
+                <span data-bride>ليلى</span>
+            </h2>
+
+            <p class="footer-small" data-anim="fade" data-delay=".2">صُنعت بكل الحب</p>
+        </footer>
+
+    </main>
+
+    <!-- الموسيقى (لا تعمل إلا بعد ضغط المستخدم على زر الموسيقى) -->
+    <audio id="weddingMusic" src="assets/music.mp3" preload="none" loop>
+    </audio>
+
+    <footer class="developer-footer">
+        <h3>Need a Wedding Invitation?</h3>
+        <p>Let's Create Something Beautiful Together</p>
+
+        <a href="https://wa.me/201012087282?text=Hello%20Seif%2C%20I%20want%20to%20book%20a%20wedding%20invitation." target="_blank" rel="noopener noreferrer" class="book-invitation-btn">
+            Book Your Invitation
+        </a>
+
+        <div class="developer-credit">
+            Designed &amp; Developed by
+            <a href="https://github.com/seif-elneary" target="_blank" rel="noopener noreferrer">
+                Seif Elneary
+            </a>
+        </div>
+    </footer>
+
+</body>
+
+</html>
